@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-import brain_games.scripts.brain_games as bg
+import brain_games.scripts.welcome as bg
 import prompt
 import random
 

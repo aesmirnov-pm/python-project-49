@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 
-import brain_games.scripts.brain_games as bg
+import brain_games.scripts.welcome as bg
 import prompt
 import random
+
 
 def greatest_common_divisor(number_1, number_2):
     min_number = min(number_1, number_2)
