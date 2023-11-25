@@ -18,7 +18,7 @@ def series_of_number():
 
 def main():
     name = bg.welcome()
-    print('Find the greatest common divisor of given numbers.')
+    print('What number is missing in the progression?')
     i = 0
     while i < 3:
         list_random_namber = series_of_number()
