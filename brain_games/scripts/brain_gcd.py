@@ -24,16 +24,10 @@ def main():
         print("Question: " + str(number_1) + " " + str(number_2))
         answer_user = prompt.string('Your answer: ')
         answer_correct = greatest_common_divisor(number_1, number_2)
-        result_correct = answer_user == str(answer_correct)
-
-        if result_correct:
-            print('Correct!')
-        else:
-            print("'" + answer_user + "' is wrong answer ;(. Correct answer was '" + str(answer_correct) + "'")
-            print("Let's try again, " + name)
-            break
+        if bg.print_result(name, str(answer_correct), answer_user) == False:
+            return
         i += 1
-     print("Congratulations, " + name + "!")
+    print("Congratulations, " + name + "!")
 
 
 if __name__ == '__main__':

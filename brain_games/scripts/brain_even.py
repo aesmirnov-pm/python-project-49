@@ -19,12 +19,7 @@ def main():
             correct_answer = 'yes'
         else:
             correct_answer = 'no'
-        result = answer_user == correct_answer
-        if result:
-            print('Correct!')
-        else:
-            print("'" + answer_user + "' is wrong answer ;(. Correct answer was '" + correct_answer + "'")
-            print("Let's try again, " + name)
+        if bg.print_result(name, correct_answer, answer_user) == False:
             return
         i += 1
     print("Congratulations, " + name + "!")
