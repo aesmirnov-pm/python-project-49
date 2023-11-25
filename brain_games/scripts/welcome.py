@@ -6,7 +6,8 @@ def print_result(name, correct_answer, answer_user):
         print('Correct!')
         return True
     else:
-        print("'" + answer_user + "' is wrong answer ;(. Correct answer was '" + str(correct_answer) + "'")
+        print("'", answer_user, "' is wrong answer ;(. Correct answer was '",
+              str(correct_answer), "'", sep='')
         print("Let's try again, " + name + "!")
         return False
 
