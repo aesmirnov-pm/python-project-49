@@ -10,6 +10,7 @@ def print_result(name, correct_answer, answer_user):
         print("Let's try again, " + name + "!")
         return False
 
+
 def welcome():
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')

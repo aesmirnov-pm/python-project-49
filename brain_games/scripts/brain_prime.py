@@ -27,7 +27,7 @@ def main():
             correct_answer = 'yes'
         else:
             correct_answer = 'no'
-        if bg.print_result(name, correct_answer, answer_user) == False:
+        if bg.print_result(name, correct_answer, answer_user) is False:
             return
         i += 1
     print("Congratulations, " + name + "!")

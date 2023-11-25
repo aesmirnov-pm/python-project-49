@@ -24,7 +24,7 @@ def main():
         print("Question: " + str(number_1) + " " + str(number_2))
         answer_user = prompt.string('Your answer: ')
         answer_correct = greatest_common_divisor(number_1, number_2)
-        if bg.print_result(name, str(answer_correct), answer_user) == False:
+        if bg.print_result(name, str(answer_correct), answer_user) is False:
             return
         i += 1
     print("Congratulations, " + name + "!")

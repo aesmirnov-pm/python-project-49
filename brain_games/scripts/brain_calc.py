@@ -18,7 +18,7 @@ def main():
         print("Question: " + str(number_1) + " " + list_operator[index] + " " + str(number_2))
         answer_user = prompt.string('Your answer: ')
         answer_correct = eval(str(number_1) + list_operator[index] + str(number_2))
-        if bg.print_result(name, str(answer_correct), answer_user) == False:
+        if bg.print_result(name, str(answer_correct), answer_user) is False:
             return
         i += 1
     print("Congratulations, " + name + "!")
