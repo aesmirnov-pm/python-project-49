@@ -29,7 +29,7 @@ def main():
         print(*list_random_namber)
         answer_user = prompt.string('Your answer: ')
         answer_correct = hidden_number
-        if bg.print_result(name, answer_correct, answer_user) == False:
+        if bg.print_result(name, str(answer_correct), answer_user) == False:
             return
         i += 1
     print("Congratulations, " + name + "!")    
