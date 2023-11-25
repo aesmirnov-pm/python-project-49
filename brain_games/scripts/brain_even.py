@@ -7,7 +7,7 @@ import random
 
 
 def main():
-    name = bg.main()
+    name = bg.welcome()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 0
     while i < 3:
@@ -25,9 +25,9 @@ def main():
         else:
             print("'" + answer_user + "' is wrong answer ;(. Correct answer was '" + correct_answer + "'")
             print("Let's try again, " + name)
-            break
+            return
         i += 1
-
+    print("Congratulations, " + name + "!")
 
 if __name__ == '__main__':
     main()

@@ -16,7 +16,7 @@ def is_prime(n):
 
 
 def main():
-    name = bg.main()
+    name = bg.welcome()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     i = 0
     while i < 3:
@@ -35,6 +35,7 @@ def main():
             print("Let's try again, " + name)
             break
         i += 1
+     print("Congratulations, " + name + "!")
 
 
 if __name__ == '__main__':
