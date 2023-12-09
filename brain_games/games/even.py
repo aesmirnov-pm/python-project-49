@@ -7,7 +7,7 @@ import random
 
 
 def main():
-    name = bg.engine()
+    name = bg.welcome()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 0
     while i < 3:

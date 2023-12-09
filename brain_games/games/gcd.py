@@ -15,7 +15,7 @@ def greatest_common_divisor(number_1, number_2):
 
 
 def main():
-    name = bg.engine()
+    name = bg.welcome()
     print('Find the greatest common divisor of given numbers.')
     i = 0
     while i < 3:
