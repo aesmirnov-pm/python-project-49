@@ -5,7 +5,7 @@ import brain_games.gammes.progression as progression
 
 
 def main():
-    progression.main.series_of_number()
+    progression.main()
 
 
 if __name__ == '__main__':

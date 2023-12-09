@@ -5,7 +5,7 @@ import brain_games.games.gcd as gcd
 
 
 def main():
-    gcd.main.greatest_common_divisor()
+    gcd.main()
 
 
 if __name__ == '__main__':
