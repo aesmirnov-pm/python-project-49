@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-import brain_games.gammes.progression as progression
+import brain_games.games.progression as progression
 
 
 def main():
