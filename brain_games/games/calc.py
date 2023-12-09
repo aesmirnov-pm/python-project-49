@@ -7,7 +7,7 @@ import random
 
 
 def main():
-    name = bg.welccome()
+    name = bg.welcome()
     print('What is the result of the expression?')
     i = 0
     while i < 3:
