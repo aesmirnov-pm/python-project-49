@@ -1,28 +1,11 @@
 #!/usr/bin/env python3
 
 
-import brain_games.scripts.welcome as bg
-import prompt
-import random
+import brain_games.games.even as even
 
 
 def main():
-    name = bg.welcome()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    i = 0
-    while i < 3:
-        c = random.randint(0, 20)
-        print("Question: " + str(c))
-        answer_user = prompt.string('Your answer: ')
-        is_even = c % 2 == 0
-        if is_even:
-            correct_answer = 'yes'
-        else:
-            correct_answer = 'no'
-        if bg.print_result(name, correct_answer, answer_user) is False:
-            return
-        i += 1
-    print("Congratulations, " + name + "!")
+    even.main()
 
 
 if __name__ == '__main__':
