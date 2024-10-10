@@ -14,7 +14,7 @@ def main():
         random_num = random.randint(0, 20)
         bg.question(random_num)
         answer_user = prompt.string('Your answer: ')
-        is_even = c % 2 == 0
+        is_even = random_num % 2 == 0
         if is_even:
             correct_answer = 'yes'
         else:
