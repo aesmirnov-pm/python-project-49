@@ -11,8 +11,8 @@ def main():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 0
     while i < 3:
-        c = random.randint(0, 20)
-        print("Question: " + str(c))
+        random_num = random.randint(0, 20)
+        bg.question(random_num)
         answer_user = prompt.string('Your answer: ')
         is_even = c % 2 == 0
         if is_even:

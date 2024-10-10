@@ -1,6 +1,5 @@
 import prompt
 
-
 def print_result(name, correct_answer, answer_user):
     if answer_user == correct_answer:
         print('Correct!')
@@ -17,3 +16,8 @@ def welcome():
     name = prompt.string('May I have your name? ')
     print("Hello, " + name)
     return name
+
+
+def question(*args, separator=' '):
+    result = 'Question: ' + separator.join(map(str, args))
+    print(result)

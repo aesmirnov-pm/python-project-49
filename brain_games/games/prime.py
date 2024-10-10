@@ -21,6 +21,7 @@ def main():
     i = 0
     while i < 3:
         number = random.randint(1, 200)
+        bg.question(number)
         print("Question: " + str(number))
         answer_user = prompt.string('Your answer: ')
         if is_prime(number):

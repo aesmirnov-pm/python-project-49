@@ -15,8 +15,7 @@ def main():
         number_2 = random.randint(0, 20)
         index = random.randint(0, 2)
         list_operator = ['+', '-', '*']
-        print("Question:", str(number_1), list_operator[index],
-              str(number_2), sep=' ')
+        bg.question(number_1, list_operator[index], number_2)
         answer_user = prompt.string('Your answer: ')
         expression = str(number_1) + list_operator[index] + str(number_2)
         answer_correct = eval(expression)

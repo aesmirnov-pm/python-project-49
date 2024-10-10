@@ -25,8 +25,7 @@ def main():
         random_index = random.randint(1, 9)
         hidden_number = list_random_namber[random_index]
         list_random_namber[random_index] = ".."
-        print("Question: ", end='')
-        print(*list_random_namber)
+        bg.question(list_random_namber)
         answer_user = prompt.string('Your answer: ')
         answer_correct = hidden_number
         if bg.print_result(name, str(answer_correct), answer_user) is False:
