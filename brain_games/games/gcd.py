@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-import brain_games.engine as bg
+import brain_games.engine as engine
 import prompt
 import random
 
@@ -15,16 +15,16 @@ def greatest_common_divisor(number_1, number_2):
 
 
 def main():
-    name = bg.welcome()
+    name = engine.welcome()
     print('Find the greatest common divisor of given numbers.')
     i = 0
     while i < 3:
         number_1 = random.randint(2, 50)
         number_2 = random.randint(2, 50)
-        bg.question(number_1, number_2)
+        engine.question(number_1, number_2)
         answer_user = prompt.string('Your answer: ')
         answer_correct = greatest_common_divisor(number_1, number_2)
-        if bg.print_result(name, str(answer_correct), answer_user) is False:
+        if engine.print_result(name, str(answer_correct), answer_user) is False:
             return
         i += 1
     print("Congratulations, " + name + "!")

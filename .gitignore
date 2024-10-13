@@ -3,7 +3,11 @@
 __pycache__
 dist/
 *.pyc
+*.pyн
+*.pyu
+*.save
 .venv/
 .coverage
 coverage.xml
 .pytest_cache/
+.DS_Store

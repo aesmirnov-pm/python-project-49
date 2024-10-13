@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-import brain_games.engine as bg
+import brain_games.engine as engine
 import prompt
 import random
 
@@ -16,19 +16,19 @@ def is_prime(n):
 
 
 def main():
-    name = bg.welcome()
+    name = engine.welcome()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     i = 0
     while i < 3:
         number = random.randint(1, 200)
-        bg.question(number)
+        engine.question(number)
         print("Question: " + str(number))
         answer_user = prompt.string('Your answer: ')
         if is_prime(number):
             correct_answer = 'yes'
         else:
             correct_answer = 'no'
-        if bg.print_result(name, correct_answer, answer_user) is False:
+        if engine.print_result(name, correct_answer, answer_user) is False:
             return
         i += 1
     print("Congratulations, " + name + "!")
