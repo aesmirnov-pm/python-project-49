@@ -3,9 +3,9 @@
 
 import brain_games.engine as engine
 import prompt
-import random
 import brain_games.consts as consts
 import brain_games.utils as utils
+
 
 def is_even(num):
     return num % 2 == 0
