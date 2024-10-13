@@ -4,6 +4,7 @@
 import brain_games.engine as engine
 import prompt
 import random
+import brain_games.consts as consts
 
 
 def is_prime(n):
@@ -17,21 +18,21 @@ def is_prime(n):
 
 def main():
     name = engine.welcome()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    print(consts.PRIME_INSTRUCTION)
     i = 0
-    while i < 3:
+    while i < consts.REPEATS:
         number = random.randint(1, 200)
         engine.question(number)
         print("Question: " + str(number))
-        answer_user = prompt.string('Your answer: ')
+        answer_user = prompt.string(consts.YOUR_ANSWER)
         if is_prime(number):
-            correct_answer = 'yes'
+            correct_answer = consts.YES
         else:
-            correct_answer = 'no'
+            correct_answer = consts.NO
         if engine.print_result(name, correct_answer, answer_user) is False:
             return
         i += 1
-    print("Congratulations, " + name + "!")
+    engine.congrats(name)
 
 
 if __name__ == '__main__':

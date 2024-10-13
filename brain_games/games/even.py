@@ -4,25 +4,29 @@
 import brain_games.engine as engine
 import prompt
 import random
+import brain_games.consts as consts
+import brain_games.utils as utils
+
+def is_even(num):
+    return num % 2 == 0
 
 
 def main():
     name = engine.welcome()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print(consts.EVEN_INSTRUCTION)
     i = 0
-    while i < 3:
-        random_num = random.randint(0, 20)
+    while i < consts.REPEATS:
+        random_num = utils.random_number_from_0_to_20()
         engine.question(random_num)
-        answer_user = prompt.string('Your answer: ')
-        is_even = random_num % 2 == 0
-        if is_even:
-            correct_answer = 'yes'
+        answer_user = prompt.string(consts.YOUR_ANSWER)
+        if is_even(random_num):
+            correct_answer = consts.YES
         else:
-            correct_answer = 'no'
+            correct_answer = consts.NO
         if engine.print_result(name, correct_answer, answer_user) is False:
             return
         i += 1
-    print("Congratulations, " + name + "!")
+    engine.congrats(name)
 
 
 if __name__ == '__main__':

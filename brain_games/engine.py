@@ -22,3 +22,7 @@ def welcome():
 def question(*args, separator=' '):
     result = 'Question: ' + separator.join(map(str, args))
     print(result)
+
+
+def congrats(name):
+    print("Congratulations, " + name + "!")
