@@ -1,5 +1,6 @@
 import prompt
 
+
 def print_result(name, correct_answer, answer_user):
     if answer_user == correct_answer:
         print('Correct!')
