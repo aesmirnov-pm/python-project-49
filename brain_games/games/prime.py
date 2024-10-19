@@ -19,8 +19,5 @@ def is_prime(n):
 def return_question_and_answer():
     number = random.randint(1, 200)
     question = engine.question(number)
-    if is_prime(number):
-        correct_answer = "yes"
-    else:
-        correct_answer = "no"
+    correct_answer = "yes" if is_prime(number) else "no"
     return question, correct_answer

@@ -11,6 +11,7 @@ def return_question_and_answer():
     first_num = random.randint(2, 15)
     step = random.randint(2, 5)
     missed_num_ind = random.randint(0, PROGRESSION_LENGTH)
+    i = 0
     progression = [
         '..' if i == missed_num_ind else str(first_num + i * step)
         for i in range(PROGRESSION_LENGTH)
