@@ -4,7 +4,7 @@
 # Maintainability Badge from codeclimate
 [![Maintainability](https://api.codeclimate.com/v1/badges/2c99a9ba728fe3c0d7e0/maintainability)](https://codeclimate.com/github/145kjhgv/python-project-49/maintainability)
 
-https://asciinema.org/a/GnrJvEgNwclVqgopVtCqcbPC3
+[![asciicast](https://asciinema.org/a/GnrJvEgNwclVqgopVtCqcbPC3.png)](https://asciinema.org/a/GnrJvEgNwclVqgopVtCqcbPC3)
 
 https://asciinema.org/a/OXjKvYTfXZpS1uzFzi8XnzEGW
 

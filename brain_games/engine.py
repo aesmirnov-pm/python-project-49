@@ -1,4 +1,20 @@
+
+
+import brain_games.cli as cli
+import brain_games.consts as consts
 import prompt
+
+
+def run(game):
+    name = cli.welcome()
+    print(game.INSTRUCTION)
+    for i in range(consts.REPEATS):
+        game_question, answer_correct = game.return_question_and_answer()
+        print(game_question)
+        answer_user = prompt.string('Your answer: ')
+        if print_result(name, str(answer_correct), answer_user) is False:
+            return
+    congrats(name)
 
 
 def print_result(name, correct_answer, answer_user):
@@ -12,16 +28,8 @@ def print_result(name, correct_answer, answer_user):
         return False
 
 
-def welcome():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print("Hello, " + name)
-    return name
-
-
 def question(*args, separator=' '):
-    result = 'Question: ' + separator.join(map(str, args))
-    print(result)
+    return 'Question: ' + separator.join(map(str, args))
 
 
 def congrats(name):

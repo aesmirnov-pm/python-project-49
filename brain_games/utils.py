@@ -1,5 +1,7 @@
+
+
 import random
 
 
-def random_number_from_0_to_20():
+def get_random_number():
     return random.randint(0, 20)

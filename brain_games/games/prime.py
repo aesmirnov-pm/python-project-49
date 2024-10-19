@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
 
 
 import brain_games.engine as engine
-import prompt
 import random
-import brain_games.consts as consts
+
+INSTRUCTION = ('Answer "yes" if given number is prime. '
+               'Otherwise answer "no".')
 
 
 def is_prime(n):
@@ -16,24 +16,11 @@ def is_prime(n):
     return True
 
 
-def main():
-    name = engine.welcome()
-    print(consts.PRIME_INSTRUCTION)
-    i = 0
-    while i < consts.REPEATS:
-        number = random.randint(1, 200)
-        engine.question(number)
-        print("Question: " + str(number))
-        answer_user = prompt.string(consts.YOUR_ANSWER)
-        if is_prime(number):
-            correct_answer = consts.YES
-        else:
-            correct_answer = consts.NO
-        if engine.print_result(name, correct_answer, answer_user) is False:
-            return
-        i += 1
-    engine.congrats(name)
-
-
-if __name__ == '__main__':
-    main()
+def return_question_and_answer():
+    number = random.randint(1, 200)
+    question = engine.question(number)
+    if is_prime(number):
+        correct_answer = "yes"
+    else:
+        correct_answer = "no"
+    return question, correct_answer
