@@ -1,5 +1,3 @@
-
-
 import brain_games.cli as cli
 import brain_games.consts as consts
 import prompt

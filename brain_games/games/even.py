@@ -1,5 +1,3 @@
-
-
 import brain_games.engine as engine
 from brain_games.utils import get_random_number
 
