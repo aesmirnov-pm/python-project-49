@@ -10,3 +10,5 @@ dist/
 .coverage
 coverage.xml
 .pytest_cache/
+.idea
+.DS_Store
