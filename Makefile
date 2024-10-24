@@ -5,7 +5,7 @@ build:
 publish:
 	poetry publish --dry-run
 package-install:
-    pip install --force-reinstall dist/*.whl
+	python3 -m pip install dist/*.whl
 brain-game:
 	poetry run brain-games
 brain-even:
