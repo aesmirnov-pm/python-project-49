@@ -1,8 +1,6 @@
 import brain_games.engine as engine
 import random
-
-INSTRUCTION = ('Answer "yes" if given number is prime. '
-               'Otherwise answer "no".')
+import brain_games.consts as consts
 
 
 def is_prime(n):
@@ -19,3 +17,7 @@ def return_question_and_answer():
     question = engine.question(number)
     correct_answer = "yes" if is_prime(number) else "no"
     return question, correct_answer
+
+
+def run_prime_game():
+    engine.run(return_question_and_answer, consts.INSTRUCTION_PRIME)

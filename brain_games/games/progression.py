@@ -1,7 +1,8 @@
 import brain_games.engine as engine
 import random
+import brain_games.consts as consts
 
-INSTRUCTION = 'What number is missing in the progression?'
+INSTRUCTION = consts.INSTRUCTION_PROGRESSION
 PROGRESSION_LENGTH = 10
 
 
@@ -17,3 +18,7 @@ def return_question_and_answer():
     correct_answer = first_num + step * missed_num_ind
     question = engine.question(*progression)
     return question, correct_answer
+
+
+def run_progression_game():
+    engine.run(return_question_and_answer, consts.INSTRUCTION_PROGRESSION)

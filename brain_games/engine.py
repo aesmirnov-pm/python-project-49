@@ -1,13 +1,12 @@
-import brain_games.cli as cli
 import brain_games.consts as consts
 import prompt
 
 
-def run(game):
-    name = cli.welcome()
-    print(game.INSTRUCTION)
+def run(game, instruction):
+    name = prompt.string('Welcome to the Brain Games!\nMay I have your name? ')
+    print(f'Hello, {name}!\n{instruction}')
     for i in range(consts.REPEATS):
-        game_question, answer_correct = game.return_question_and_answer()
+        game_question, answer_correct = game()
         print(game_question)
         answer_user = prompt.string('Your answer: ')
         if print_result(name, str(answer_correct), answer_user) is False:
