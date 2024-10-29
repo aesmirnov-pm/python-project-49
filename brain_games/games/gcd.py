@@ -6,7 +6,7 @@ import brain_games.consts as consts
 
 def return_question_and_answer():
     number_1, number_2 = random.sample(range(2, 50), 2)
-    question = engine.question(number_1, number_2)
+    question = f'{number_1}, {number_2}'
     correct_answer = math.gcd(number_1, number_2)
     return question, correct_answer
 

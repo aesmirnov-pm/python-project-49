@@ -17,7 +17,7 @@ def return_question_and_answer():
     operator, correct_answer = (
         get_random_math_sign_and_result(number_1, number_2)
     )
-    question = engine.question(number_1, operator, number_2)
+    question = f'{number_1} {operator} {number_2}'
     return question, str(correct_answer)
 
 

@@ -10,7 +10,7 @@ def is_even(num):
 def return_question_and_answer():
     random_num = get_random_numbers(1)[0]
     correct_answer = "yes" if is_even(random_num) else "no"
-    question = engine.question(random_num)
+    question = str(random_num)
     return question, correct_answer
 
 

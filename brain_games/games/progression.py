@@ -16,7 +16,7 @@ def return_question_and_answer():
     ]
     progression[missed_num_ind] = '..'
     correct_answer = first_num + step * missed_num_ind
-    question = engine.question(*progression)
+    question = ' '.join(map(str, progression))
     return question, correct_answer
 
 

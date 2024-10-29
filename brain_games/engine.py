@@ -1,33 +1,20 @@
-import brain_games.consts as consts
+from brain_games.consts import REPEATS
 import prompt
 
 
 def run(game, instruction):
     name = prompt.string('Welcome to the Brain Games!\nMay I have your name? ')
     print(f'Hello, {name}!\n{instruction}')
-    for i in range(consts.REPEATS):
+    for i in range(REPEATS):
         game_question, answer_correct = game()
-        print(game_question)
+        print(f'Question: {game_question}')
         answer_user = prompt.string('Your answer: ')
-        if print_result(name, str(answer_correct), answer_user) is False:
+        if answer_user == str(answer_correct):
+            print('Correct!')
+        else:
+            print(
+                f"'{answer_user}' is wrong answer ;(."
+                f"Correct answer was '{answer_correct}'\n"
+                f"Let's try again, {name}!")
             return
-    congrats(name)
-
-
-def print_result(name, correct_answer, answer_user):
-    if answer_user == correct_answer:
-        print('Correct!')
-        return True
-    else:
-        print("'", answer_user, "' is wrong answer ;(. Correct answer was '",
-              str(correct_answer), "'", sep='')
-        print("Let's try again, " + name + "!")
-        return False
-
-
-def question(*args, separator=' '):
-    return 'Question: ' + separator.join(map(str, args))
-
-
-def congrats(name):
-    print("Congratulations, " + name + "!")
+    print(f'Congratulations, {name}!')
